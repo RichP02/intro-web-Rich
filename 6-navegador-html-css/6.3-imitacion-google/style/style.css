@@ -1,0 +1,128 @@
+header{
+    font-family: 'Merriweather', serif;
+    background-color: white;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.perfil{
+    width:35px;
+    height:35px;
+    border-radius:150px;
+    padding-left: 10px;
+}
+
+.buscador{
+    text-align: center;
+    font-size: 0px;
+    padding-top: 150px;
+}
+
+.azul{
+    color: #3369e8;
+    font-size: 100px;
+}
+
+.rojo{
+    color: #d50f25;
+    font-size: 100px;
+}
+
+.amarillo{
+    color: #eeb211;
+    font-size: 100px;
+}
+
+.verde{
+    color: #009925;
+    font-size: 100px;
+}
+
+input {
+    width: 35%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #555252;
+    border-radius: 50px;
+}
+
+.input{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.usuario{
+    text-align: right;
+    padding-top: 0px;
+}
+
+button{
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 8px 18px 8px 18px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover{
+    border-color: wheat;
+    padding-top: 12px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.link-boton{
+    color: white;
+    text-decoration: none;
+}
+
+.botones{
+    text-align: center;
+    padding-bottom: 235px;
+}
+
+br, p{
+    color: white;
+    font-size: 17px;
+}
+
+.ultimo{
+    background-color: rgb(54, 53, 53);
+    padding-left: 10px;
+    color: white;
+}
+
+.extras{
+    text-align: center;
+    color: white;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.extras2{
+    text-align: right;
+    color: white;
+    padding-inline: 15px;
+    text-decoration: none;
+    float: right;
+}
+
+.extras:hover{
+    text-decoration: underline;
+}
+
+.extras2:hover{
+    text-decoration: underline;
+}
