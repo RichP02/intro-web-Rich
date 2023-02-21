@@ -1,0 +1,163 @@
+body{
+    background-color: rgb(196, 200, 159);
+}
+
+/*-------------------------------------------*/
+/*--------Inicio foto y presentacion---------*/
+
+.presentacion{
+    font-family: 'Mynerve', cursive;
+    font-size: 70px;
+    color: #59CA76;
+    text-align: left;
+}
+
+.extras{
+    font-size: 30px;
+}
+
+.sobre-mi {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    color: black;
+}
+
+.hola-soy {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    align-items: center;
+}
+
+/*-------------------------------------------*/
+/*----------Datos nombre, fecha, etc---------*/
+
+.datos-mi{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(143, 97, 151, .6);
+    padding: 20px;
+    margin: 5%;
+    float: right;
+}
+
+.redes-sociales{
+    height: 50px;
+    padding: 5px;
+}
+
+.informacion{
+    font-size: 20px;
+}
+
+/*-------------------------------------------*/
+/*-----------------Educacion-----------------*/
+
+.escuelas{
+    margin: 5%;
+    border-radius: 20px;
+    background-color: rgba(10, 163, 182, .4);
+    display: flex;
+    flex-direction: column;
+}
+
+.texto{
+    font-size: 20px;
+    margin: 30px;
+}
+
+.nombre{
+    font-size: 30px;
+}
+
+/*-------------------------------------------*/
+/*---------------Varias fotos----------------*/
+
+.contenedor-fotos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-left: 42px;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: solid #59CA76 3px;
+}
+
+/*-------------------------------------------*/
+/*-------------------Boton-------------------*/
+
+button{
+    margin-top: 50px;
+    background-color: rgb(143, 97, 151);
+    border: none;
+    color: white;
+    padding: 25px;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover{
+    background-color: #352d39;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*-------------------------------------------*/
+/*-------------Cambiando diseños-------------*/
+
+@media (max-width:1500px) {
+    .sobre-mi{
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+    .ricardo{
+        width: 300px;
+    }
+}
+
+@media (max-width:480px){
+    .presentacion{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .datos-mi{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    }
+
+    .redes-sociales{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .escuelas{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .contenedor-fotos{
+        padding: 10px;
+    }
+
+    .imagenes{
+        width: 100%;
+    }
+}
