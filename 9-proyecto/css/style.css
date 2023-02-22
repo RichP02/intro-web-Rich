@@ -1,24 +1,58 @@
-body{
-    background-color: rgb(196, 200, 159);
+.grid-layout{
+    display: grid;
+    grid-template-areas: "menu menu menu"
+                        "bienvenida bienvenida ric-foto"
+                        "educacion educacion nombre"
+                        "fotos fotos fotos"
+                        "descargar descargar descargar";
+    grid-template-rows: 9vh auto;
+    grid-template-columns: 45% 50vh auto;
 }
 
 
-
-
-
-/*-------------------------------------------*/
-/*--------Inicio foto y presentacion---------*/
-
-.sobre-mi {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
+/*------------------------------------------*/
+/*-------------------Menu-------------------*/
+.menu{
+    grid-area: menu;
+    display: inline-flex;
     align-items: center;
-    width: 50%;
-    margin: 20px auto;
-    padding: 15px;
-    color: black;
+    justify-content: center;
+}
+
+#menu-nav{
+    background-color: #000;
+}
+
+#menu-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-nav ul li{
+    display: inline-block;
+}
+
+#menu-nav ul li a{
+    color: white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#menu-nav ul li a:hover{
+    background-color: #a44eb9;
+}
+
+.item-r{
+    float: right;
+}
+
+
+/*------------------------------------------*/
+/*----------------bienvenida----------------*/
+.bienvenida{
+    grid-area: bienvenida;
 }
 
 .presentacion{
@@ -26,30 +60,52 @@ body{
     font-size: 70px;
     color: #59CA76;
     text-align: left;
+    text-align: center;
 }
 
 .extras{
     font-size: 30px;
 }
 
-.hola-soy {
-    display: flex;
-    flex-direction: column;
-    width: min-content;
-    align-items: center;
+
+/*------------------------------------------*/
+/*----------------ric-foto------------------*/
+.ric-foto{
+    grid-area: ric-foto;
+}
+
+.ric-editar{
+    border-radius: 10% / 50%;
 }
 
 
+/*------------------------------------------*/
+/*----------------educacion-----------------*/
+.educacion{
+    grid-area: educacion;
+    margin: 5%;
+    border-radius: 20px;
+    background-color: rgba(10, 163, 182, .4);
+}
+
+.texto{
+    font-size: 20px;
+    margin: 30px;
+}
+
+.escuela-nombre{
+    font-size: 30px;
+}
 
 
-
-/*-------------------------------------------*/
-/*----------Datos nombre, fecha, etc---------*/
-
-.datos-mi{
+/*------------------------------------------*/
+/*-----------------nombre-------------------*/
+.nombre{
+    grid-area: nombre;
     display: flex;
     flex-direction: column;
     width: max-content;
+    height: max-content;
     align-items: center;
     border-radius: 15px;
     padding: 10px;
@@ -59,45 +115,23 @@ body{
     float: right;
 }
 
+.informacion{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
 .redes-sociales{
     height: 50px;
     padding: 5px;
 }
 
-.informacion{
-    font-size: 20px;
+
+/*------------------------------------------*/
+/*-------------------Fotos------------------*/
+.fotos{
+    grid-area: fotos;
 }
-
-
-
-
-
-/*-------------------------------------------*/
-/*-----------------Educacion-----------------*/
-
-.escuelas{
-    margin: 5%;
-    border-radius: 20px;
-    background-color: rgba(10, 163, 182, .4);
-    display: flex;
-    flex-direction: column;
-}
-
-.texto{
-    font-size: 20px;
-    margin: 30px;
-}
-
-.nombre{
-    font-size: 30px;
-}
-
-
-
-
-
-/*-------------------------------------------*/
-/*---------------Varias fotos----------------*/
 
 .container-main{
     display: flex;
@@ -147,24 +181,20 @@ body{
 }
 
 
-
-
-
-/*-------------------------------------------*/
-/*-------------------Boton-------------------*/
-
-.container-descargar{
-    text-align: center;
-    margin: 50px;
+/*------------------------------------------*/
+/*----------------descargar cv--------------*/
+.descargar{
+    grid-area: descargar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#cta-button {
+#download-button {
     text-align: center !important;
-    background-color: #d95430;
+    background-color: #e3b5f7;
     border-radius: 300px;
-    -webkit-box-shadow: 0 3px 0 0 #b13f21;
-    -moz-box-shadow: 0 3px 0 0 #b13f21;
-    box-shadow: 0 3px 0 0 #b13f21;
+
     position: relative;
     -webkit-transition: .1s background-color linear;
     -moz-transition: .1s background-color linear;
@@ -172,7 +202,7 @@ body{
     transition: .1s background-color linear;
     padding: 25px 46px;
     color: #fff;
-    border-color: #d34b27;
+    border-color: #8773c4;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -181,8 +211,7 @@ body{
     width: 220px;
 }
 
-
-#cta-button:hover {
+#download-button:hover {
     background-color: #fff;
     border-radius: 300px;
     -webkit-box-shadow: 0 5px 0 0 #b13f21;
@@ -197,48 +226,44 @@ body{
 }
 
 
-
-
-
 /*-------------------------------------------*/
 /*-------------Cambiando diseños-------------*/
 
-@media (max-width:1500px) {
-    .sobre-mi{
-        display: flex;
-        flex-direction: column;
-        margin: 15px;
-    }
-    .ricardo{
-        width: 300px;
+@media (max-width:1400px) {
+    .grid-layout{
+        display: grid;
+        grid-template-areas: "menu menu"
+                        "bienvenida ric-foto"
+                        "educacion nombre"
+                        "fotos fotos"
+                        "descargar descargar";
+        grid-template-rows: auto;
+        grid-template-columns: 60vh auto;
     }
 }
 
-@media (max-width:480px){
-    .presentacion{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .datos-mi{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-    }
-
-    .redes-sociales{
-    display: flex;
-    flex-direction: row;
-    }
-
-    .escuelas{
-    display: flex;
-    flex-direction: column;
+@media (max-width:1000px) {
+    .grid-layout{
+        display: grid;
+        grid-template-areas:
+                        "menu"
+                        "bienvenida"
+                        "ric-foto"
+                        "nombre"
+                        "educacion"
+                        "fotos"
+                        "descargar";
+        grid-template-columns: auto;
     }
 
     .container-main {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .ric-foto{
+        display: flex;
+        justify-content: center;
     }
 }
