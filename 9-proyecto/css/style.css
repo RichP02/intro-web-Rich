@@ -2,19 +2,12 @@ body{
     background-color: rgb(196, 200, 159);
 }
 
+
+
+
+
 /*-------------------------------------------*/
 /*--------Inicio foto y presentacion---------*/
-
-.presentacion{
-    font-family: 'Mynerve', cursive;
-    font-size: 70px;
-    color: #59CA76;
-    text-align: left;
-}
-
-.extras{
-    font-size: 30px;
-}
 
 .sobre-mi {
     display: flex;
@@ -28,12 +21,27 @@ body{
     color: black;
 }
 
+.presentacion{
+    font-family: 'Mynerve', cursive;
+    font-size: 70px;
+    color: #59CA76;
+    text-align: left;
+}
+
+.extras{
+    font-size: 30px;
+}
+
 .hola-soy {
     display: flex;
     flex-direction: column;
     width: min-content;
     align-items: center;
 }
+
+
+
+
 
 /*-------------------------------------------*/
 /*----------Datos nombre, fecha, etc---------*/
@@ -60,6 +68,10 @@ body{
     font-size: 20px;
 }
 
+
+
+
+
 /*-------------------------------------------*/
 /*-----------------Educacion-----------------*/
 
@@ -80,42 +92,113 @@ body{
     font-size: 30px;
 }
 
+
+
+
+
 /*-------------------------------------------*/
 /*---------------Varias fotos----------------*/
 
-.contenedor-fotos{
+.container-main{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding-left: 42px;
 }
 
-.imagenes{
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    border: solid #59CA76 3px;
+.container {
+    position: relative;
+    width: 50%;
+    padding: 15px;
 }
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
 
 /*-------------------------------------------*/
 /*-------------------Boton-------------------*/
 
-button{
-    margin-top: 50px;
-    background-color: rgb(143, 97, 151);
-    border: none;
-    color: white;
-    padding: 25px;
-    font-size: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.container-descargar{
+    text-align: center;
+    margin: 50px;
 }
 
-button:hover{
-    background-color: #352d39;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+#cta-button {
+    text-align: center !important;
+    background-color: #d95430;
+    border-radius: 300px;
+    -webkit-box-shadow: 0 3px 0 0 #b13f21;
+    -moz-box-shadow: 0 3px 0 0 #b13f21;
+    box-shadow: 0 3px 0 0 #b13f21;
+    position: relative;
+    -webkit-transition: .1s background-color linear;
+    -moz-transition: .1s background-color linear;
+    -o-transition: .1s background-color linear;
+    transition: .1s background-color linear;
+    padding: 25px 46px;
+    color: #fff;
+    border-color: #d34b27;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: normal;
+    width: 220px;
 }
+
+
+#cta-button:hover {
+    background-color: #fff;
+    border-radius: 300px;
+    -webkit-box-shadow: 0 5px 0 0 #b13f21;
+    -moz-box-shadow: 0 5px 0 0 #b13f21;
+    box-shadow: 0 5px 0 0 #b13f21;
+    position: relative;
+    -webkit-transition: .1s background-color linear;
+    -moz-transition: .1s background-color linear;
+    -o-transition: .1s background-color linear;
+    transition: .1s background-color linear;
+    color: #d95430;
+}
+
+
+
+
 
 /*-------------------------------------------*/
 /*-------------Cambiando diseños-------------*/
@@ -153,11 +236,9 @@ button:hover{
     flex-direction: column;
     }
 
-    .contenedor-fotos{
-        padding: 10px;
-    }
-
-    .imagenes{
-        width: 100%;
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

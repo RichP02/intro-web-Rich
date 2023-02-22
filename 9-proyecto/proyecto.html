@@ -15,6 +15,13 @@
 
 
 <body>
+    <!----------Botones inicio----------->
+    <button>Inicio</button>
+    <button>Educación</button>
+    <button>Informacion sobre mi</button>
+    <button>Imagenes</button>
+    <a href="./images/ricardo.pdf" download><button>DESCARGAR CV</button></a>
+
     <!----------Inicio foto y presentacion----------->
     <div class="sobre-mi" data-aos="fade-up-left" data-aos-duration="2000">
         <div class="hola-soy">
@@ -62,27 +69,32 @@
     </div>
 
     <!-----------------Varias fotos------------------>
-    <div class="contenedor-fotos" data-aos="zoom-in-down">
-        <div>
-            <div>
-                <img src="./images/kali.jpg" alt="Imagen de kali linux" class="imagenes">
+    <div class="container-main">
+        <div class="container">
+            <img src="./images/kali.jpg" alt="Foto de kali linux" class="image">
+            <div class="overlay">
+                <div class="text">Foto de kali linux, por mi curso de UCamp</div>
             </div>
         </div>
-        <div>
-            <div >
-                <img src="./images/videojuego.png" alt="Imagen de una de las primeras páginas que hice" class="imagenes">
+
+        <div class="container">
+            <img src="./images/videojuego.png" alt="Imagen de una de las primeras páginas que hice" class="image">
+            <div class="overlay">
+                <div class="text">Foto de mi primera pagina que hice en Dev. f</div>
             </div>
         </div>
-        <div>
-            <div>
-                <img src="./images/html-css.png" alt="Imagen del logo de HTML y CSS" class="imagenes">
+
+        <div class="container">
+            <img src="./images/html-css.png" alt="Imagen del logo de HTML y CSS" class="image">
+            <div class="overlay">
+                <div class="text">Imagen del logo de HTML y CSS</div>
             </div>
         </div>
     </div>
 
     <!---------------------Boton--------------------->
-    <div class="descargar" data-aos="zoom-in-up">
-        <a href="./images/ricardo.pdf" download><button>DESCARGAR CV</button></a>
+    <div data-aos="zoom-in-up" class="container-descargar">
+        <a href="./images/ricardo.pdf" id="cta-button">DESCARGAR CV</a>
     </div>
 
 
