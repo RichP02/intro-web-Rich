@@ -64,6 +64,7 @@
     color: #59CA76;
     text-align: left;
     text-align: center;
+    margin: 20px;
 }
 
 .extras{
@@ -77,6 +78,12 @@
 /*----------------ric-foto------------------*/
 .ric-foto{
     grid-area: ric-foto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-content: center;
 }
 
 .ric-editar{
